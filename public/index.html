@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Charumathi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-subtitle {
+            color: #667eea;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .item-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .skill:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Charumathi P</h1>
+            <p>Full Stack Developer | Creative Problem Solver</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="section-title">Contact</div>
+                <div class="contact-info">
+                    <div class="contact-item">📧 charumathi322006@gmail.com</div>
+                    <div class="contact-item">📱 +91 6383914659</div>
+                    <div class="contact-item">📍 Thiruvallur, Tamil Nadu</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <div class="item">
+                    <p class="item-description">Eager to apply academic knowledge and technical skills in a professional environment. Currently pursuing a Bachelor of Science in Computer Science at S.A Engineering College, graduating in 2027.</p>
+                
+            </div>
+
+            <div class="section">
+                <div class="section-title">Experience</div>
+               
+                <div class="item">
+                    <div class="item-title">Full Stack Developer</div>
+                    <div class="item-subtitle">Web Solutions Inc | 2019 - 2021</div>
+                    <p class="item-description">Developed responsive web applications, implemented RESTful APIs, and collaborated with cross-functional teams.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Skills</div>
+                <div class="skills-container">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">Java</div>
+                  
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="item">
+                    <div class="item-title">Bachelor of Computer Science and Engineering</div>
+                    <div class="item-subtitle">S.A Engineering College | 2027</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
