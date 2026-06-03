@@ -1,240 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Charumathi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charumathi P | Frontend Developer</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            animation: slideIn 0.6s ease-out;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+body{
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.6;
+}
 
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            animation: fadeIn 0.8s ease-out;
-        }
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    text-align:center;
+}
 
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
+.hero-content h1{
+    font-size:3.5rem;
+    margin-bottom:10px;
+}
 
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
+.hero-content h2{
+    font-weight:400;
+    margin-bottom:20px;
+}
 
-        .content {
-            padding: 40px;
-        }
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
 
-        .section {
-            margin-bottom: 35px;
-            animation: fadeInUp 0.6s ease-out;
-        }
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.btn:hover{
+    transform:translateY(-3px);
+}
 
-        .section:nth-child(1) { animation-delay: 0.1s; }
-        .section:nth-child(2) { animation-delay: 0.2s; }
-        .section:nth-child(3) { animation-delay: 0.3s; }
-        .section:nth-child(4) { animation-delay: 0.4s; }
+/* Sections */
+section{
+    padding:80px 0;
+}
 
-        .section-title {
-            font-size: 1.8em;
-            color: #667eea;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            display: inline-block;
-        }
+.section-title{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:50px;
+    color:#2563eb;
+}
 
-        .item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
+/* About */
+.about{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
 
-        .item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-        }
+.profile{
+    width:250px;
+    height:250px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:5rem;
+    margin:auto;
+}
 
-        .item-title {
-            font-size: 1.2em;
-            color: #333;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
+/* Skills */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-        .item-subtitle {
-            color: #667eea;
-            font-size: 0.95em;
-            font-style: italic;
-            margin-bottom: 8px;
-        }
+.skill-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:.3s;
+}
 
-        .item-description {
-            color: #666;
-            line-height: 1.6;
-        }
+.skill-card:hover{
+    transform:translateY(-8px);
+}
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+/* Projects */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
 
-        .skill {
-            background: #667eea;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-        }
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
 
-        .skill:hover {
-            background: #764ba2;
-            transform: scale(1.1);
-        }
+.project-card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
 
-        .contact-info {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
-        }
+/* Timeline */
+.timeline{
+    border-left:4px solid #2563eb;
+    padding-left:25px;
+}
 
-        .contact-item {
-            color: #666;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+.timeline-item{
+    margin-bottom:30px;
+}
 
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
+/* Contact */
+.contact{
+    text-align:center;
+}
 
-            .content {
-                padding: 20px;
-            }
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    display:inline-block;
+}
 
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0f172a;
+    color:white;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:2.5rem;
+}
+
+.about{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Charumathi P</h1>
-            <p>Full Stack Developer | Creative Problem Solver</p>
-        </div>
 
-        <div class="content">
-            <div class="section">
-                <div class="section-title">Contact</div>
-                <div class="contact-info">
-                    <div class="contact-item">📧 charumathi322006@gmail.com</div>
-                    <div class="contact-item">📱 +91 6383914659</div>
-                    <div class="contact-item">📍 Thiruvallur, Tamil Nadu</div>
-                </div>
-            </div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Charumathi P</h1>
+        <h2>Frontend Developer | UI/UX Designer</h2>
 
-            <div class="section">
-                <div class="section-title">Professional Summary</div>
-                <div class="item">
-                    <p class="item-description">Eager to apply academic knowledge and technical skills in a professional environment. Currently pursuing a Bachelor of Science in Computer Science at S.A Engineering College, graduating in 2027.</p>
-                
-            </div>
+        <p>
+            Passionate Frontend Developer skilled in HTML, CSS,
+            JavaScript, React.js, Python, MongoDB and UI/UX Design.
+            Building responsive, user-friendly and performance-focused
+            web applications.
+        </p>
 
-            <div class="section">
-                <div class="section-title">Experience</div>
-               
-                <div class="item">
-                    <div class="item-title">Full Stack Developer</div>
-                    <div class="item-subtitle">Web Solutions Inc | 2019 - 2021</div>
-                    <p class="item-description">Developed responsive web applications, implemented RESTful APIs, and collaborated with cross-functional teams.</p>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Skills</div>
-                <div class="skills-container">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">Python</div>
-                    <div class="skill">Java</div>
-                  
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-title">Education</div>
-                <div class="item">
-                    <div class="item-title">Bachelor of Computer Science and Engineering</div>
-                    <div class="item-subtitle">S.A Engineering College | 2027</div>
-                </div>
-            </div>
-        </div>
+        <a href="#contact" class="btn">Contact Me</a>
     </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+<div class="container">
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+    <div class="profile">CP</div>
+
+    <div>
+        <p>
+            I'm a Computer Science Engineering student with a CGPA of
+            8.50/10. I enjoy creating responsive websites, modern user
+            interfaces and interactive web applications.
+        </p>
+
+        <br>
+
+        <p>
+            I have experience working with React.js, Node.js,
+            Express.js, MongoDB and UI/UX design tools like Figma.
+            My goal is to build elegant digital experiences that are
+            simple, accessible and user-friendly.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section style="background:#eef4ff;">
+<div class="container">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Programming</h3>
+<p>Python, Java, C</p>
+</div>
+
+<div class="skill-card">
+<h3>Frontend</h3>
+<p>HTML, CSS, JavaScript, React.js</p>
+</div>
+
+<div class="skill-card">
+<h3>Backend</h3>
+<p>Node.js, Express.js</p>
+</div>
+
+<div class="skill-card">
+<h3>Database</h3>
+<p>MongoDB, MySQL, PostgreSQL, SQL</p>
+</div>
+
+<div class="skill-card">
+<h3>UI/UX</h3>
+<p>Figma, Wireframing, Prototyping</p>
+</div>
+
+<div class="skill-card">
+<h3>Soft Skills</h3>
+<p>Communication, Teamwork, Problem Solving</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<div class="container">
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>PrepSmart - Placement Preparation App</h3>
+<p>
+Responsive placement preparation platform with aptitude,
+communication and mock test features. Built using React.js
+and JavaScript with mobile-friendly design.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Student Management System</h3>
+<p>
+Developed a complete student management platform for
+attendance, profiles and marks management with responsive
+design and real-time updates.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section style="background:#eef4ff;">
+<div class="container">
+
+<h2 class="section-title">Internships</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>.NET Framework - Neurospark</h3>
+<p>Event Registration System using Database & API</p>
+</div>
+
+<div class="timeline-item">
+<h3>Full Stack Development - Big-SI-Bucks Innovation</h3>
+<p>
+Worked on Student Management System using React.js,
+Node.js, Express.js and MongoDB.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<div class="container">
+<h2 class="section-title">Certifications</h2>
+
+<ul style="max-width:700px;margin:auto;">
+<li>Infosys SpringBoard – Front End Web Developer</li>
+<li>NPTEL – Programming in Java</li>
+<li>NPTEL – Operating System</li>
+<li>Cisco – Introduction to Cyber Security</li>
+<li>AWS Academy Cloud Foundations</li>
+</ul>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:#eef4ff;">
+<div class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+<div class="contact-box">
+<h3>Let's Connect</h3>
+<p>📧 Charumathi322006@gmail.com</p>
+<p>📱 +91 6383914659</p>
+<p>📍 Tiruttani, Tamil Nadu, India</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Charumathi P | Frontend Developer Portfolio
+</footer>
+
 </body>
 </html>
